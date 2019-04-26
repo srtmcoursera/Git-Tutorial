@@ -1,0 +1,112 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{The Birth of Git}{3}{The Birth of Git}{0}}
+\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@framepages {3}{3}}
+\headcommand {\slideentry {1}{0}{2}{4/7}{}{0}}
+\headcommand {\beamer@framepages {4}{7}}
+\headcommand {\beamer@subsectionpages {3}{7}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{8}{First came Linux}}
+\headcommand {\slideentry {1}{1}{1}{8/8}{First came Linux}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\beamer@subsectionpages {8}{8}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{9}{Then came Git}}
+\headcommand {\slideentry {1}{2}{1}{9/10}{Then came Git}{0}}
+\headcommand {\beamer@framepages {9}{10}}
+\headcommand {\beamer@sectionpages {3}{10}}
+\headcommand {\beamer@subsectionpages {9}{10}}
+\headcommand {\sectionentry {2}{Git Basics}{11}{Git Basics}{0}}
+\headcommand {\slideentry {2}{0}{1}{11/11}{}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\beamer@subsectionpages {11}{11}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Commands}}
+\headcommand {\slideentry {2}{1}{1}{12/13}{Commands}{0}}
+\headcommand {\beamer@framepages {12}{13}}
+\headcommand {\beamer@subsectionpages {12}{13}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{14}{Initializing}}
+\headcommand {\slideentry {2}{2}{1}{14/14}{Initializing}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{15}{Stage Changes}}
+\headcommand {\slideentry {2}{3}{1}{15/15}{Stage Changes}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{16}{Commits}}
+\headcommand {\slideentry {2}{4}{1}{16/16}{Commits}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@sectionpages {11}{16}}
+\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\sectionentry {3}{Local Branching}{17}{Local Branching}{0}}
+\headcommand {\slideentry {3}{0}{1}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {3}{0}{2}{18/18}{}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {3}{0}{3}{19/19}{}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {3}{0}{4}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionpages {17}{20}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{21}{Reset}}
+\headcommand {\slideentry {3}{1}{1}{21/21}{Reset}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {3}{1}{2}{22/22}{Reset}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionpages {21}{22}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{23}{Merging}}
+\headcommand {\slideentry {3}{2}{1}{23/23}{Merging}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionpages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{24}{Conflicts}}
+\headcommand {\slideentry {3}{3}{1}{24/24}{Conflicts}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {3}{3}{2}{25/25}{Conflicts}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\beamer@sectionpages {17}{25}}
+\headcommand {\beamer@subsectionpages {24}{25}}
+\headcommand {\sectionentry {4}{Remote Branches}{26}{Remote Branches}{0}}
+\headcommand {\slideentry {4}{0}{1}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{27}{GitHub}}
+\headcommand {\slideentry {4}{1}{1}{27/27}{GitHub}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@subsectionpages {27}{27}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{28}{Git remote}}
+\headcommand {\slideentry {4}{2}{1}{28/28}{Git remote}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\beamer@subsectionpages {28}{28}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{29}{Git Push}}
+\headcommand {\slideentry {4}{3}{1}{29/29}{Git Push}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@subsectionpages {29}{29}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{30}{Git Clone}}
+\headcommand {\slideentry {4}{4}{1}{30/30}{Git Clone}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@subsectionpages {30}{30}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{31}{GitHub Permissions}}
+\headcommand {\slideentry {4}{5}{1}{31/31}{GitHub Permissions}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\beamer@subsectionpages {31}{31}}
+\headcommand {\beamer@subsectionentry {0}{4}{6}{32}{Git Pull}}
+\headcommand {\slideentry {4}{6}{1}{32/32}{Git Pull}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\beamer@subsectionentry {0}{4}{7}{33}{Git Pull Requests}}
+\headcommand {\slideentry {4}{7}{1}{33/33}{Git Pull Requests}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@sectionpages {26}{33}}
+\headcommand {\beamer@subsectionpages {33}{33}}
+\headcommand {\sectionentry {5}{GitHub Projects\\(and the end)}{34}{GitHub Projects\\(and the end)}{0}}
+\headcommand {\slideentry {5}{0}{1}{34/34}{}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {5}{0}{2}{35/35}{}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\beamer@partpages {1}{35}}
+\headcommand {\beamer@subsectionpages {34}{35}}
+\headcommand {\beamer@sectionpages {34}{35}}
+\headcommand {\beamer@documentpages {35}}
+\headcommand {\gdef \inserttotalframenumber {30}}

@@ -1,0 +1,338 @@
+
+\documentclass{beamer}
+\usetheme{Madrid}
+\usepackage[utf8]{inputenc}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\title{Tools for Open Source}
+\subtitle{Git, GitHub, and more}
+\author{Héctor M. de la Rosa Prado}
+\institute{Universidad Nacional Autónoma de México}
+\date{\today}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+\begin{frame}{Table of Contents}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\end{frame}
+
+\section{The Birth of Git}
+\begin{frame}
+
+\begin{itemize}
+\item In this course we will learn one of the greatest tools for open source 
+development. \pause Git \pause
+\item We will also look at how we can contribute to open source helping in 
+projects and making our own\pause as well as giving an idea of how one should 
+code in the open source community.
+\end{itemize}
+
+\end{frame}
+
+\subsection{First came Linux}
+\begin{frame}
+\begin{itemize}
+\item Whenever someone mentions open source, the first thing that come to mind 
+is the Linux Operating System.
+\item At this time, Linus worked on many projects developing Linux, this made 
+it difficult to stay on track of his work.
+
+\end{itemize}
+
+\end{frame}
+
+\subsection{Then came Git}
+\begin{frame}
+
+\begin{itemize}
+\item Git is a Version Control System created by Linus Torvalds to help him 
+manage all of his projects.
+\item Since then, it has become the most popular Version Control System used 
+today.\pause
+\end{itemize}
+
+\begin{definition}
+Version Control (or Revision Control) is a tool that helps us manage the 
+changes in a project.
+\end{definition}
+\end{frame}
+
+\section{Git Basics}
+\subsection{Commands}
+\begin{frame}
+The basic git commands we will be using will be the following:
+\vspace{0.5cm}
+\begin{center}
+\begin{tabular}{||c|c|c||}
+\hline
+Local & Branching & Remote\\
+\hline
+\hline
+init & checkout & push \\ 
+\hline
+add & branch & pull \\
+\hline
+commit & merge & clone\\
+\hline
+log & reset & remote\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{0.5cm}
+\pause
+There we will just learn the basic tools to get you started, but there are more 
+advanced techniques that you can learn in a more advanced course.
+\end{frame}
+
+\subsection{Initializing}
+\begin{frame}
+Let's start by making a small toy project.
+\begin{itemize}
+\item Make a file called "HelloWorld.py" which askes for a name in input and 
+prints a small greeting to that person.
+\item Once you are done, go to the bash terminal and enter git init.
+\item You should get the following message to know that everything went 
+well: Initialized empty Git repository in 'FOLDER'
+\end{itemize}
+\end{frame}
+
+\subsection{Stage Changes}
+\begin{frame}
+Clearly we don't want an empty project, so we need to add the file 
+HelloWorld.py to the repository.
+\begin{itemize}
+\item Add a file or changes using 'git add HelloWorld.py'
+\item You can also add multiple changes by seperating with spaces
+\item Or add all changes by using 'git add .'
+\item To make sure your changes were add you can use 'git status'
+\end{itemize}
+\end{frame}
+
+\subsection{Commits}
+\begin{frame}
+An important not is, this file still isn't in our repository, all we did was 
+'stage' the changes, Now we have to make a commit.
+\begin{itemize}
+\item You can make a commit with 'git commit', but you also need to 
+put a message related to your commit.
+\item This is why most people just 'git commit -m "message"', This will save 
+you a bit of time and is much less confusing
+\item Save your new file and use the message 'Initial Commit'
+\item You can check your save history with 'git log'
+\end{itemize}
+\end{frame}
+
+\section{Local Branching}
+\begin{frame}
+So far, all we have is a faster terminal version of google docs for 
+code. Although this is nice, git wouldn't be so popular with just these 
+features.
+\newline
+\newline
+What really makes git shine is how you can manage a large project with various 
+people working on it at the same time.
+\newline
+\newline
+Part of this is thanks to local and remote branches.
+\end{frame}
+
+\begin{frame}
+First lets start with local branching. We can see what branches a repo has with 
+'git branch'. For now we only have one which is named master. Lets make two new 
+branches named 'branch1' and 'branch2'
+\begin{itemize}
+ \item To make a new branch, all we have to do is 'git branch NEWBRANCH'
+ \item If we check again we now have two branches. To move to the new branch we 
+use 'git checkout NEWBRANCH'.
+ \item  For now they are the same, but later we can make some differences to 
+them.
+ \item These two steps can be joined with 'git checkout -b NEWBRANCH', the -b 
+flag builds the branch before moving to it.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+While in the new branches, make two files, one named sin.py and the secound 
+named cos.py. Here you can make a function sinFunction(x:int) that returns the 
+sin function of x and cosFunction(x:int) that return the cos function of x.
+\begin{itemize}
+\item In branch1 make these functions with numpy, and in branch2, use the math 
+library.
+\item After that, go back to master and in HelloWorld.py import these 
+two files and print sinFunction(0.5) and cosFunction(0.5).
+\item Make sure to commit all three of these branches with the message you like.
+\end{itemize}
+\end{frame}
+
+\subsection{Reset}
+\begin{frame}
+As you may have noticed, the new branch turns to a copy of what we already had 
+in our previous branch. If we wanted to reset to a previous commit, we will 
+need to reset.
+\begin{itemize}
+\item Resetting is simple, look up the commit hash code you wish to return to 
+with 'git log' and type 'git reset f074bbb527b4adf9b93bcc931c4be132e77ed51b' 
+(this is an example).
+\item When you reset, you have three options. hard mixed or soft.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item A soft reset returns your state but leaves the changes staged. So if you 
+look at your files after a soft reset, nothing would have changed, but if you 
+use 'git status' all of these changes will be recorded. You can redo these 
+changes just by doing a commit.
+\item A mixed reset will leave the changes like a soft reset, but they will not 
+be staged, meaning you would have to add then commit the changes before redoing 
+the commit.
+\item A hard reset removes every change you had at the time. This means that 
+all of your files will be exactly the same as when you had that exact commit. 
+The changes you mad made will disappear from that branch and there is no way of 
+getting it back. BE CAREFUL!
+\end{itemize}
+
+\end{frame}
+
+
+\subsection{Merging}
+\begin{frame}
+If we keep our branches seperated, they don't really do much, this is why we 
+need to be able to join changes from one branch to another.
+\begin{itemize}
+\item Go back to master and use the following code to merge master with 
+branch1: git merge branch1 -m 'math+hello --commit'
+\item This last flag saves us time commiting, or you can commit after the same 
+way you did before.
+\item Now we have sen.py and cos.py in our master branch. If we look, branch1 
+still exists, but it hasn't been changed.
+\item This is great, now we can use branches to work on different features at 
+the same time without having multiple feature bugs confusing our team.
+\item But there is one more detail...
+\end{itemize}
+\end{frame}
+
+\subsection{Conflicts}
+\begin{frame}
+If we have two branches working on the same file and decide to merge, git is 
+smart enough to work out how to manage them... well most of the time. Sometimes 
+if we modify the same line in both branches, we can get what is called a 
+conflict. Thankfully git makes it easy enough to manage these.
+\begin{itemize}
+\item Now we will merge master with branch2, since we made changes to sen.py 
+in both of them, we should get some conflicts.
+\item If we do it like before, we will get an error. We have to fix the 
+conflicts. After git tries to merge, it will add both changes to the file.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item If there is a conflict it will mark the current branch with HEAD 
+and the 
+merging branch with its name, and the code will be in between.
+\item To solve the conflicts simply erase the code you didn't want and add the 
+one you did. If you wanted both you can leave them both in the file.
+\item Leave numpy in one file and math in another, then finished the merge by 
+staging and commiting these changes.
+\end{itemize}
+
+\end{frame}
+
+\section{Remote Branches}
+\subsection{GitHub}
+\begin{frame}
+The bread and butter of git has been the ability to share your code in pretty 
+much the most efective way.
+\newline
+\newline
+To do this there are websites like GitHub, BitBucket and GitLab that allow us 
+to upload our projects in the internet. The most famous is GitHub, so it is 
+what we will use here.
+\newline
+\newline
+Go online and make your free account. If you want to make private 
+repository you would need to pay or apply for a student account. For this you 
+will need a university email address.
+\end{frame}
+
+\subsection{Git remote}
+\begin{frame}
+ Now we have to learn how to add a project to a service like GitHub. For this we will use our sin/cos project.
+ We can manage our remotes with git remote, to add a remote branch use \\
+ 'git remote add origin https://github.com/holyfiddlex/temp.git'\\
+ 'git remote add origin', makes a new remote called origin. and the site tells you where the remote can be found.
+\end{frame}
+
+\subsection{Git Push}
+\begin{frame}
+If we look at our GitHub, there haven't been any changes, that's because the remote git hasn't recorded any change.\\
+\begin{itemize}
+ \item The first time you upload your changes you have to use 'git push -u origin master'
+ \item The -u flag sets 'origin master' as the default push settings, meaning you push the master branch to the remote 'origin'
+ \item Now you can check your git 
+ \item From now own you can use 'git push' to upload/download changes to and from origin. Make another change in the README and push.
+\end{itemize}
+\end{frame}
+
+\subsection{Git Clone}
+\begin{frame}
+Now we also need to know how to get involved in another project. For this you will need a friend.\\
+ \begin{itemize}
+  \item Go to you friends account and find his/her project for this tutorial.
+  \item Copy the url and add '.git' at the end, it should look like this:\\ 'https://github.com/USERNAME/PROJECTNAME.git'
+  \item On a different folder (Not inside your project folder) use \\'git clone https://github.com/USERNAME/PROJECTNAME.git' 
+  \item You now have your partners project in your computer, and you can make changes. But...
+  \item  Make a change and try to push it with 'git push', there will be an error
+ \end{itemize}
+\end{frame}
+
+\subsection{GitHub Permissions}
+\begin{frame}
+The problem we have is that your partner still doesn't have permissions to modify your project. This means we will have to change the permissions in the github project.\\
+ \begin{itemize}
+ \item Method 1: In your Project GitHub page, go to settings and then collaborators, you will need to input your password. Add your friend to collaborators.
+ \item Your partner will need to accept an invite sent to their email. After that, they will have permissions to make changes.
+ \item Method 2: Click on your friends project and click 'fork'. This will make a replica of the project in your account. Clone the forked project and upload the changes there (perferable in a different branch).
+ \item After you have made all of the changes, you can make a Pull Request. This can get a bit more complicated and for now we will use Method 1. 
+ \end{itemize}
+\end{frame}
+
+\subsection{Git Pull}
+\begin{frame}
+Now, if one of our partners make a change in the project and uploads it to GitHub, how to I get those changes?
+\begin{itemize}
+ \item Since we are on the same remote and we already configured the default from origin to master, we can just use 'git pull'
+ \item If you have multiple remotes or if you want to pull to a branch that isn't master, you would have to use 'git pull remote branch'
+ \item Pull the change that your partner made into you project.
+\end{itemize}
+\end{frame}
+
+\subsection{Git Pull Requests}
+\begin{frame}
+Like I mentioned before, there are also Pull requests, and on top of that, there is Merge Requests but these will be left for another more advanced course. For now these are the basics.
+\end{frame}
+
+\section{GitHub Projects\\(and the end)}
+\begin{frame}
+There are many projects in GitHub, I recommend exploring the page and looking for places where you can make a change. This is the end of the tutorial, but feel free to:
+\begin{itemize}
+ \item Start a project alone or with your friends. It can be a personal or school project.
+ \item Help others by joining open source projects.
+ \item Learn more about Git and open source project management!
+\end{itemize}
+\end{frame}
+
+\end{document}

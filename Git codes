@@ -1,0 +1,95 @@
+First time git
+			Prints current version of git
+					git --version 
+
+			Changes the current git configuration so that the name can be seen
+					git config --global user.name "USERNAME"
+
+			Changes the current git configuration so that the email can be seen
+					git config --global user.email "USER-EMAIL@MAIL.com"
+
+			Prints the list of current global configurations
+					git config --list
+
+			Removes the configuration parameter
+					git config --global --unset user.PARAMETER
+
+			Brings the help screen for the "verb" or command
+					git help VERB
+					git VERB --help
+
+
+Local project to local git repository
+			Create a git folder inside current directory
+					git init
+			
+			Prints new or untracked files (things you can add)
+					git status
+			
+			Text file that ignores the files inside
+					touch .gitignore
+			
+			Add files to the "staging area" so that it can later be uploaded to the repository (can add all with -A)
+					git add FILENAME
+					git add -A
+			
+			Removes everything from "staging area"
+					git reset
+			
+			Make a commit from the "staging area" with a message
+					git commit -m "MESSAGE"
+			
+			Make a history of commits
+					git log
+
+
+Remote git repository to local git repository
+			Clone the repositoy to a local folder
+					git clone URL DESTINATION
+			
+			List all of the remote users
+					git remote -v
+			
+			List all of the branches
+					git branch -a
+
+
+Changes in local git repository
+			Check for changes in the code. Have to add and commit changes after.
+					git diff
+			
+			Get any changes that may have been made while we were working
+					git pull REMOTE BRANCH
+			
+
+
+Upload changes from local to remote
+			Set any changes made
+					git push [-U] REMOTE BRANCH
+
+
+Set branches to the repository
+			List local branches
+					git branch
+			
+			Make a new branch
+					git branch BRANCH-NAME
+			
+			Set current work branch to target
+					git checkout BRANCH-NAME
+
+
+Merging branches
+			Merge the current branch to target branch
+					git merge BRANCH-NAME
+			
+			Delete local target branch after merge
+					git branch -d BRACH-NAME
+			
+			Delete remote target branch after merge
+					git push REMOTE --delete BRANCH-NAME
+
+Rebase brances
+			Rebase one branch to the other.
+          git rebase [-i] branch1 branch2
+          git rebase [-i] origin/master~5 master
